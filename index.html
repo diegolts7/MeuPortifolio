@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Biblioteca de icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="modalMenu">     <!--Declarando o modal de menu que vai estar disponivel em telas menores-->
+        <i class='bx bx-x' id="iconeClose"></i>
+        <a href="">Inicio</a>
+        <a href="">Sobre</a>                <!--navegação-->
+        <a href="">Projetos</a>
+        <a href="">Contratar</a>
+    </div>
+    <div class="conteiner">     <!--O conteiner principal do site que abrigará todo o conteudo e elementos-->
+        <header>       <!--Cabeçalho-->
+            <img src="img/logo_size-removebg-preview.png" alt="">   <!--Meu logo-->
+        </header>
+        <nav>       <!--Navegação pelo site nas telas maiores-->
+            <div class="links">     <!--conteiner que abriga todos os links do nav-->
+                <a href="">Inicio</a>
+                <a href="">Sobre</a>
+                <a href="">Projetos</a>
+                <a href="">Contratar</a>
+            </div>
+            <div class="icone">        <!--Icone menu que fica visivel em telas menores e abre a navegação-->
+                <i class="fas fa-solid fa-bars fa-2x" id="iconeMenu"></i>
+            </div>
+            <div class="theme">      <!--Icones de mudança de tema, tem sua visibilidade de acordo com otema selecionado-->
+                <i class="far fa-regular fa-sun custom-size" id="iconeSol"></i>
+                <i class="far fa-regular fa-moon custom-size" id="iconeLua"></i>
+            </div>
+        </nav>
+        <main>      <!--O corpo do site, onde fica todos os elementos e conteiner de conteudos-->
+            <p class="text">Olá! muito prazer<strong id="efeitoDig"></strong></p>
+        </main>
+        <footer>        <!--A parte inferior do site-->
+            footer
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
