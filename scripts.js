@@ -25,11 +25,22 @@ let loop;                   //variavel do intervalo que vai ser definido na fun�
 
 let iterador = 0;           //variavel que vai iterar na função typing()  
 
-let themeWhite = false;     //tema que esta definido no momento
+let themeWhite = true;     //tema que esta definido no momento
+
+//verificando qual thema esta salvo na localStorage e salvando na variavel themeWhite
+
+if(localStorage.getItem("theme") !== null){         
+    if(localStorage.getItem("theme") === "true"){
+        themeWhite = true;
+    }else if(localStorage.getItem("theme") === "false"){
+        themeWhite = false;
+    }
+}
 
 
 // Eventos no DOM
 
+window.addEventListener("DOMContentLoaded", mudarTema)
 iconeMenu.addEventListener("click", abrirMenu);
 theme.addEventListener("click", mudarTema);
 iconeClose.addEventListener("click", fecharMenu);
@@ -44,12 +55,6 @@ function abrirMenu() {
     
     modalMenu.style.display = "flex";
     iconeMenu.style.display = "none";
-
-    if(!themeWhite){
-        iconeSol.style.display = "none";
-    }else {
-        iconeLua.style.display = "none";
-    }
     
 }
 
@@ -68,21 +73,14 @@ function fecharMenu() {
 
     modalMenu.style.display = "none";
     iconeMenu.style.display = "flex";
-
-    if(!themeWhite){
-        iconeSol.style.display = "flex";
-    }else {
-        iconeLua.style.display = "flex";
-    }
 }
 
 // Função para mudar o tema e as cores dos elementos de acordo com o tema escolhido
 
 function mudarTema() {
+    if(themeWhite === true){        //verificando a variavel booleana do tema
 
-    if(!themeWhite){        //verificando a variavel booleana do tema
-
-        body.style.background = "url('img/7063.jpg') repeat fixed";     //mudando o background da pagina
+        body.style.background = "white";     //mudando o background da pagina
 
         preDefinicao.forEach((elemento)=>{      //percorrendo todos os elemntos e mudando a cor
             elemento.style.color = "black"
@@ -91,7 +89,10 @@ function mudarTema() {
         Div.style.color = "lightseagreen";
         iconeLua.style.display = "flex";
         iconeSol.style.display = "none";
-        themeWhite = true;
+        
+
+        localStorage.setItem("theme",`${themeWhite}`);
+        themeWhite = false;
 
     }else {
 
@@ -104,7 +105,10 @@ function mudarTema() {
         Div.style.color = "lightseagreen";
         iconeLua.style.display = "none";
         iconeSol.style.display = "flex";
-        themeWhite = false;
+        
+
+        localStorage.setItem("theme",`${themeWhite}`);
+        themeWhite = true;
 
     }
 }
