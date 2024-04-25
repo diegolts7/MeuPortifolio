@@ -18,6 +18,7 @@ const theme = document.querySelector(".theme");
 const preDefinicao = document.querySelectorAll("*");
 const texto = ", eu sou o SousaDev.";
 const Div = document.querySelector("#efeitoDig");
+const IconesRedeSocial = document.querySelectorAll("#iconeRedeSocial i");
 
 // variaveis de base para uso nas funcionalidades
 
@@ -45,6 +46,7 @@ iconeMenu.addEventListener("click", abrirMenu);
 theme.addEventListener("click", mudarTema);
 iconeClose.addEventListener("click", fecharMenu);
 window.addEventListener("resize", fecharMenuRedimensionar);
+modalMenu.addEventListener("click", fecharMenuClick);
 
 
 // Funçoes
@@ -75,6 +77,14 @@ function fecharMenu() {
     iconeMenu.style.display = "flex";
 }
 
+// Função para fechar o menu ao clicar fora ou clicar em algum link
+
+function fecharMenuClick(e) {
+    if(e.target !== iconeClose){
+        fecharMenu();
+    }
+}
+
 // Função para mudar o tema e as cores dos elementos de acordo com o tema escolhido
 
 function mudarTema() {
@@ -85,7 +95,7 @@ function mudarTema() {
         preDefinicao.forEach((elemento)=>{      //percorrendo todos os elemntos e mudando a cor
             elemento.style.color = "black"
         });
-
+        
         Div.style.color = "lightseagreen";
         iconeLua.style.display = "flex";
         iconeSol.style.display = "none";
@@ -102,6 +112,10 @@ function mudarTema() {
             elemento.style.color = "white"
         });
 
+        IconesRedeSocial.forEach((elemento) => {
+            elemento.style.color = "lightseagreen";
+        });
+        
         Div.style.color = "lightseagreen";
         iconeLua.style.display = "none";
         iconeSol.style.display = "flex";

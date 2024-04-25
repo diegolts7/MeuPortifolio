@@ -12,9 +12,9 @@
 <body>
     <div class="modalMenu">     <!--Declarando o modal de menu que vai estar disponivel em telas menores-->
         <i class='bx bx-x' id="iconeClose"></i>
-        <a href="">Inicio</a>
-        <a href="">Sobre</a>                <!--navegação-->
-        <a href="">Projetos</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre</a>                <!--navegação-->
+        <a href="#projetos">Projetos</a>
     </div>
     <div class="conteiner">     <!--O conteiner principal do site que abrigará todo o conteudo e elementos-->
         <header>       <!--Cabeçalho-->
@@ -22,9 +22,9 @@
         </header>
         <nav>       <!--Navegação pelo site nas telas maiores-->
             <div class="links">     <!--conteiner que abriga todos os links do nav-->
-                <a href="">Inicio</a>
-                <a href="">Sobre</a>
-                <a href="">Projetos</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
             </div>
             <div class="icone">        <!--Icone menu que fica visivel em telas menores e abre a navegação-->
                 <i class="fas fa-solid fa-bars fa-2x" id="iconeMenu"></i>
@@ -35,7 +35,7 @@
             </div>
         </nav>
         <main>      <!--O corpo do site, onde fica todos os elementos e conteiner de conteudos-->
-            <div class="conteinerInicio">
+            <div class="conteinerInicio" id="inico">
                 <div class="informacoes">
                     <div class="textTitulo">
                         <p>Olá! muito prazer<strong id="efeitoDig"></strong></p>
@@ -48,7 +48,7 @@
                             <button class="botaoContato" id="curriculo"><a href="" target="_blank"></a>Download CV</button>
                             <button class="botaoContato" id="contratar"><a href="https://api.whatsapp.com/send?phone=5588999353185&text=Ol%C3%A1!%20Desejo%20fazer%20um%20or%C3%A7amento." target="_blank">Contratar</a></button>
                         </div>
-                        <div class="redesSociais">
+                        <div class="redesSociais" id="iconeRedeSocial">
                             <a href="mailto:diego7lts7@gmail.com?subject=Contratar&body=Ol%C3%A1!+Desejo+fazer+um+or%C3%A7amento." target="_blank"><i class='bx bxl-gmail'></i></a>
                             <a href="https://github.com/diegolts7" target="_blank"><i class='bx bxl-github' ></i></a>
                             <a href="https://www.linkedin.com/in/diego-sousa-972555221/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
@@ -56,6 +56,24 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="conteinerSobre" id="sobre">
+                <div class="contentSobre">
+                    <div class="sobreImg">
+                        <img src="img/me.jpg" alt="" class="meImg">
+                    </div>
+                    <div class="sobreText">
+                        <div class="textTituloSobre">
+                            <p><strong>Sobre Mim</strong></p>
+                        </div>
+                        <div class="textParagrafoSobre">
+                            <p>Desde novo eu tive certa dificuldade e apreensão em qual carreira e profissão seguir, mas ao ter o primeiro contato com esse mundo da programação no ensino médio despertou em mim uma grande curiosidade e uma porta de entrada, pois eu, a partir daquele momento, sabia que aquilo de alguma forma seria meu futuro. Hoje, sou aluno do curso de Análise de Desenvolvimento de Sistemas e tenho plena convicção do que quero e me dedicarei por completo na minha profissão e nos meus projetos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conteinerProjetos" id="projetos">
+
             </div>
         </main>
         <footer>        <!--A parte inferior do site-->

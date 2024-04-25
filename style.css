@@ -67,7 +67,7 @@ body {
     
     display: grid;
     grid-template-columns: auto 80%;
-    grid-template-rows: 15% auto 5%;
+    grid-template-rows: 20vh auto 5vh;
     min-height: 100vh;
 }
 
@@ -182,6 +182,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: justify;
+    flex-direction: column;
 }
 
 /*Definindo o conteiner que vai abrigar os conteiners e elementos da pagina inicio */
@@ -197,7 +198,7 @@ main {
 /*Div que abriga as informações de texto - titulo e paragrafo do inicio*/
 
 .informacoes {
-    width: 50%;
+    width: 60%;
     margin-top: -5%;
     display: flex;
     flex-direction: column;
@@ -272,18 +273,85 @@ main {
 /*Conteiner que abriga os icones das redes sociais*/
 
 .redesSociais {
+    padding: 5px;
     display: flex;
     gap: .5rem;
 }
 .redesSociais a {
     font-size: 23px;
     text-decoration: none;
+    color: lightseagreen;
 }
 .redesSociais i:hover {
     scale: 1.2;
     transition: .3s;
-}    
+}   
 
+/*Personalização da parte de 'Sobre' do site*/
+
+.conteinerSobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+/*conteiner que abriga os textos e as imagens da parte do sobre*/
+
+.contentSobre {
+    width: 60%;
+    margin-top: -5%;
+    display: flex;
+    gap: 2rem;
+    padding: 20px;
+    border-bottom: 1px solid lightseagreen;
+    border-left: 1px solid lightseagreen;
+}
+.contentSobre:hover {
+    scale: 1.1;
+    border: 1px solid lightseagreen;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    transition: .3s ease-in-out;
+}
+
+/*Conteiner que abriga a minha imagem*/
+
+.sobreImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid lightseagreen;
+}
+
+/*Estilização dos Titulos e paragrafos do sobre*/
+
+.textTituloSobre {
+    font-size: 35px;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+.textParagrafoSobre {
+    text-align: justify;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+/*Personalização da parte de 'Projetos' do site*/
+
+.conteinerProjetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
 /*Estilos da parte inferior do site*/
 
 footer {
@@ -330,12 +398,30 @@ footer {
         font-size: 15px;
         text-align: left;
     }
+    .contentSobre {
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 30%;
+    }
+    .textTituloSobre {
+        text-align: justify;
+    }
+    .textParagrafoSobre {
+        text-align: left;
+    }
+    .meImg {
+        width: 150px;
+        height: 150px;
+    }
         
 }  
 
 /*estrutura de media para dispositivos menores que 430px*/
 
 @media screen and (max-width: 430px) {
+    .informacoes {
+        width: 70%;
+    }
     header img {
         width: 50px;
     }
@@ -355,6 +441,24 @@ footer {
     }
     .botaoContato {
         margin: 2px;
+    }
+    .contentSobre {
+        flex-wrap: wrap;
+        gap: .5rem;
+        width: 70%;
+    }
+    .textTituloSobre {
+        text-align: justify;
+        font-size: 25px;
+    }
+    .textParagrafoSobre {
+        text-align: left;
+        font-size: 15px;
+        text-indent: 5px;
+    }
+    .meImg {
+        width: 110px;
+        height: 110px;
     }
         
 }  
