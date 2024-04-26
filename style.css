@@ -293,7 +293,6 @@ main {
 .conteinerSobre {
     display: flex;
     align-items: center;
-    
     height: 100vh;
     width: 100%;
     position: relative;
@@ -351,8 +350,88 @@ main {
 .conteinerProjetos {
     display: flex;
     align-items: center;
-    height: 100vh;
     width: 100%;
+    margin-top: 250px;
+    margin-bottom: 80px;
+}
+
+/*conteiner central da area de projetos*/
+
+.projects {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid lightseagreen;
+    border-left: 1px solid lightseagreen;
+    padding: 25px;
+    gap: 2rem;
+}
+.projects:hover {
+    scale: 1.02;
+    border: 1px solid lightseagreen;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    transition: .3s ease-in-out;
+}
+
+/*Conteiner que ira guardar e estilizar os elemntos de cada projeto*/
+
+.meusProjetos {
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+}
+#tituloProjetos {
+    margin-bottom: 30px;
+}
+.projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.projeto h2 {
+    text-align: justify;
+}
+.projeto p {
+    text-align: justify;
+}
+
+/*links de cada projeto*/
+
+.linksProjeto {
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+
+/*estilização das imagens usadas em cada projeto*/
+
+.imgProjeto {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    margin: 0 auto;
+}
+
+/*botão que vai abrir e fechar os projetos*/
+
+.btnProjetos {
+    padding: 8px;
+    border-radius: 15px;
+    background-color: inherit;
+    border: 1px solid lightseagreen;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.btnProjetos:hover {
+    background-color: lightseagreen;
+    transition: .3s;
+    
+}
+#fecharProjetos {
+    display: none;
 }
 
 /*Links para fazer a navegação fora da parte inicial do site*/
@@ -370,6 +449,7 @@ main {
     display: block;
     padding: 10px;
     text-decoration: none;
+    border-radius: 10px 0px 0px 10px;
 }
 .ativo {
     background-color: lightseagreen;
@@ -387,12 +467,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    font-weight: bold;
 }
 
 
 /*estrutura de media para dispositivos menores que 851px*/
 
 @media screen and (max-width: 851px) {
+    .conteiner {
+        grid-template-rows: 15vh auto 5vh;
+    }
     .linksSegundaNavegacao {
         display: none;
     }
@@ -427,7 +512,7 @@ footer {
     .contentSobre {
         flex-wrap: wrap;
         gap: 1rem;
-        margin-top: 30%;
+        margin-top: 25%;
     }
     .textTituloSobre {
         text-align: justify;
@@ -438,6 +523,19 @@ footer {
     .meImg {
         width: 150px;
         height: 150px;
+    }
+    .projects {
+        width: 68%;
+    }
+    .projeto h2 {
+        font-size: 18px;
+    }
+    .projeto p {
+        text-align: left;
+    }
+    .imgProjeto {
+        width: 270px;
+        height:170px;
     }
         
 }  
@@ -492,6 +590,20 @@ footer {
     .meImg {
         width: 110px;
         height: 110px;
+    }
+    .projects {
+        width: 80%;
+    }
+    .projeto h2 {
+        font-size: 16px;
+    }
+    .projeto p {
+        text-align: left;
+        font-size: 14px;
+    }
+    .imgProjeto {
+        width: 220px;
+        height:140px;
     }
         
 }  

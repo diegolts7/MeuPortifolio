@@ -19,6 +19,10 @@ const preDefinicao = document.querySelectorAll("*");
 const texto = ", eu sou o SousaDev.";
 const Div = document.querySelector("#efeitoDig");
 const IconesRedeSocial = document.querySelectorAll("#iconeRedeSocial i");
+const titulosProjeto = document.querySelector("#tituloProjetos");
+const btnAbrirProjetos = document.querySelector("#abrirProjetos");
+const btnFecharProjetos = document.querySelector("#fecharProjetos");
+const meusProjetos = document.querySelector(".meusProjetos");
 
 // variaveis de base para uso nas funcionalidades
 
@@ -47,9 +51,25 @@ theme.addEventListener("click", mudarTema);
 iconeClose.addEventListener("click", fecharMenu);
 window.addEventListener("resize", fecharMenuRedimensionar);
 modalMenu.addEventListener("click", fecharMenuClick);
+btnAbrirProjetos.addEventListener("click", abrirProjetos);
+btnFecharProjetos.addEventListener("click", fecharProjetos);
 
 
 // Funçoes
+
+// funções que vão abrir e fechar a area de projetos
+
+function abrirProjetos() {
+    meusProjetos.style.display = "flex";
+    btnAbrirProjetos.style.display = "none";
+    btnFecharProjetos.style.display = "flex";
+}
+
+function fecharProjetos() {
+    meusProjetos.style.display = "none";
+    btnAbrirProjetos.style.display = "flex";
+    btnFecharProjetos.style.display = "none";
+}
 
 // Função para abrir o modal menu em telas menores
 
@@ -96,6 +116,8 @@ function mudarTema() {
             elemento.style.color = "black"
         });
         
+        titulosProjeto.style.color = "lightseagreen";
+
         Div.style.color = "lightseagreen";
         iconeLua.style.display = "flex";
         iconeSol.style.display = "none";
@@ -116,6 +138,7 @@ function mudarTema() {
             elemento.style.color = "lightseagreen";
         });
         
+        titulosProjeto.style.color = "lightseagreen";
         Div.style.color = "lightseagreen";
         iconeLua.style.display = "none";
         iconeSol.style.display = "flex";

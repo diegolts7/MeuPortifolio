@@ -17,7 +17,7 @@
         <a href="#projetos">Projetos</a>
     </div>
     <div class="conteiner">     <!--O conteiner principal do site que abrigará todo o conteudo e elementos-->
-        <header>       <!--Cabeçalho-->
+        <header id="inicio">       <!--Cabeçalho-->
             <img src="img/logo_size-removebg-preview.png" alt="">   <!--Meu logo-->
         </header>
         <nav>       <!--Navegação pelo site nas telas maiores-->
@@ -35,7 +35,7 @@
             </div>
         </nav>
         <main>      <!--O corpo do site, onde fica todos os elementos e conteiner de conteudos-->
-            <div class="conteinerInicio" id="inicio">
+            <div class="conteinerInicio">
                 <div class="informacoes">
                     <div class="textTitulo">
                         <p>Olá! muito prazer<strong id="efeitoDig"></strong></p>
@@ -78,7 +78,42 @@
                 </div>
             </div>
             <div class="conteinerProjetos" id="projetos">
-
+                <div class="projects">
+                    <strong class="textTituloSobre" id="tituloProjetos">Meus Projetos</strong>
+                    <div class="projeto">
+                        <h2>1. Lista de tarefas</h2>
+                        <p>O objetivo principal desse projeto era criar uma lista de tarefas integrando com JavaScript para que eu tivesse as funcionalidades de um CRUD básico (Criar, Imprimir, Atualizar e Deletar). Outra funcionalida, consiste no salvamento na LocalStorage para não perder as tarefas e também a opção de marcar como concluida.</p>
+                        <img src="img/Captura de tela 2024-04-26 140904.png" alt="" class="imgProjeto">
+                        <div class="linksProjeto">
+                            <a href="https://github.com/diegolts7/TOdoList" target="_blank">Link do repositorio</a>
+                            <a href="https://diegolts7.github.io/TOdoList/" target="_blank">Link do site</a>
+                        </div>
+                    </div>    
+                    <div class="meusProjetos">
+                        <div class="projeto">
+                            <h2>2. Jogo de carro</h2>
+                            <p>Consite basicamente em um simples jogo de carro em uma rodovia, no qual o objetivo e desviar dos carros. Foi feito em sua grande parte com animações keyframes no css e o JavaScript para implementar os sistemas de colisão e mudança de direção, além de fazer o loop do jogo. Conta também com um sistema de pontuação conforme avança e o recorde é salvo no LocalStorage evitando perca.</p>
+                            <img src="img/Captura de tela 2024-04-26 160617.png" alt="" class="imgProjeto">
+                            <img src="img/Captura de tela 2024-04-26 160907.png" alt="" class="imgProjeto">
+                            <img src="img/Captura de tela 2024-04-26 160927.png" alt="" class="imgProjeto">
+                            <div class="linksProjeto">
+                                <a href="https://github.com/diegolts7/Road-Car-Game" target="_blank">Link do repositorio</a>
+                            </div>
+                        </div>
+                        <div class="projeto">
+                            <h2>3. Cronômetro</h2>
+                            <p>Uma aplicação básica de um Cronômetro funcional onde existe as funcionalidades de iniciar ele, pausar, continuar, resetar e ainda implementei um alarme para quando chegar no tempo definido ele vibrar. As principais funcionalidades foram feitas no java script, como o sitema de loop do tempo, a formatação do tempo e a função do alarme.</p>
+                            <img src="img/Captura de tela 2024-04-26 164326.png" alt="" class="imgProjeto">
+                            <img src="img/Captura de tela 2024-04-26 164344.png" alt="" class="imgProjeto">
+                            <div class="linksProjeto">
+                                <a href="https://github.com/diegolts7/JavaScripts-Projects/tree/main/projetos/Cronometro" target="_blank">Link do repositorio</a>
+                            </div>
+                        </div>    
+                        
+                    </div>
+                    <input type="button" class="btnProjetos" value="Mostrar mais" id="abrirProjetos">
+                    <input type="button" class="btnProjetos" value="Mostrar menos" id="fecharProjetos">
+                </div>
                 <div class="linksSegundaNavegacao">
                     <a href="#inicio">1</a>
                     <a href="#sobre">2</a>
@@ -87,7 +122,10 @@
             </div>
         </main>
         <footer>        <!--A parte inferior do site-->
-            footer
+            <p>
+                Todos os direitos reservados a Diego Leite de Sousa
+            </p>
+            <i class='bx bx-like'></i>
         </footer>
     </div>
     <script src="scripts.js"></script>
