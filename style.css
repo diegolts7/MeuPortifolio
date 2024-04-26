@@ -420,6 +420,9 @@ footer {
 /*estrutura de media para dispositivos menores que 430px*/
 
 @media screen and (max-width: 430px) {
+    .conteiner {
+        grid-template-rows: 15vh auto 5vh;
+    }
     .informacoes {
         width: 70%;
     }
@@ -427,7 +430,7 @@ footer {
         width: 50px;
     }
     .conteinerInicio {
-        margin-top: -15%;
+        margin-top: -10%;
     }
     .textTitulo {
         font-size: 17px;
