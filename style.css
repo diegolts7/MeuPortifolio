@@ -293,9 +293,10 @@ main {
 .conteinerSobre {
     display: flex;
     align-items: center;
-    justify-content: center;
+    
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 
 
@@ -309,6 +310,7 @@ main {
     padding: 20px;
     border-bottom: 1px solid lightseagreen;
     border-left: 1px solid lightseagreen;
+    margin: 0 auto;
 }
 .contentSobre:hover {
     scale: 1.1;
@@ -349,10 +351,30 @@ main {
 .conteinerProjetos {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     width: 100%;
 }
+
+/*Links para fazer a navegação fora da parte inicial do site*/
+
+.linksSegundaNavegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid lightseagreen;
+    float: right;
+}
+.linksSegundaNavegacao a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.ativo {
+    background-color: lightseagreen;
+}
+
 /*Estilos da parte inferior do site*/
 
 footer {
@@ -371,6 +393,9 @@ footer {
 /*estrutura de media para dispositivos menores que 851px*/
 
 @media screen and (max-width: 851px) {
+    .linksSegundaNavegacao {
+        display: none;
+    }
     .icone {
         display: flex;
         justify-content: center;
@@ -420,6 +445,9 @@ footer {
 /*estrutura de media para dispositivos menores que 430px*/
 
 @media screen and (max-width: 430px) {
+    .linksSegundaNavegacao {
+        display: none;
+    }
     .conteiner {
         grid-template-rows: 15vh auto 5vh;
     }
