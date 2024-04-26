@@ -264,6 +264,7 @@ main {
 }
 .botaoContato a {
     text-decoration: none;
+    
 }
 .botaoContato:hover{
     background-color: lightseagreen;
