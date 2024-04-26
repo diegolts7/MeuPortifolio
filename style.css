@@ -302,7 +302,7 @@ main {
 
 .contentSobre {
     width: 60%;
-    margin-top: -5%;
+    margin-top: -10%;
     display: flex;
     gap: 2rem;
     padding: 20px;
@@ -426,7 +426,7 @@ footer {
         width: 50px;
     }
     .conteinerInicio {
-        margin-top: 0%;
+        margin-top: -15%;
     }
     .textTitulo {
         font-size: 17px;
@@ -446,6 +446,7 @@ footer {
         flex-wrap: wrap;
         gap: .5rem;
         width: 70%;
+        margin-top: -5%;
     }
     .textTituloSobre {
         text-align: justify;

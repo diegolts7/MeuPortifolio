@@ -106,7 +106,7 @@ function mudarTema() {
 
     }else {
 
-        body.style.background = "url('img/182428240217.jpg') repeat fixed center center";       //mudando o background da pagina
+        body.style.background = "black";       //mudando o background da pagina
         
         preDefinicao.forEach((elemento)=>{         //percorrendo todos os elemntos e mudando a cor
             elemento.style.color = "white"
