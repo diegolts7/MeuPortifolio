@@ -377,7 +377,7 @@ main {
 /*Conteiner que ira guardar e estilizar os elemntos de cada projeto*/
 
 .meusProjetos {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
 }
