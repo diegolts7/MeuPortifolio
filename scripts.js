@@ -62,18 +62,7 @@ class MeusProjetos {
 
 let relacaoProjetos = new MeusProjetos();
 
-let projeto2 = new Projeto("2. Jogo de carro", "Consite basicamente em um simples jogo de carro em uma rodovia, no qual o objetivo e desviar dos carros. Foi feito em sua grande parte com animações keyframes no css e o JavaScript para implementar os sistemas de colisão e mudança de direção, além de fazer o loop do jogo. Conta também com um sistema de pontuação conforme avança e o recorde é salvo no LocalStorage evitando perca.", ["img/Captura de tela 2024-04-26 160617.png", "img/Captura de tela 2024-04-26 160907.png", "img/Captura de tela 2024-04-26 160927.png"], ["https://github.com/diegolts7/Road-Car-Game"]);
-
-let projeto3 = new Projeto("3. Cronômetro", "Uma aplicação básica de um Cronômetro funcional onde existe as funcionalidades de iniciar ele, pausar, continuar, resetar e ainda implementei um alarme para quando chegar no tempo definido ele vibrar. As principais funcionalidades foram feitas no java script, como o sitema de loop do tempo, a formatação do tempo e a função do alarme.", ["img/Captura de tela 2024-04-26 164326.png", "img/Captura de tela 2024-04-26 164344.png"], ["https://github.com/diegolts7/JavaScripts-Projects/tree/main/projetos/Cronometro"]);
-
-let projeto4 = new Projeto("4. Sistema de cadastrar clientes Web", "Esse projeto foi construido usando HTML, CSS e JS. Se trata de um cadastro de clientes especializado onde terá as funcionalidades de adicionar, atualizar, exibir, buscar e excluir, basicamente um CRUD. Feito a partir da programação orientada a objetos e utilizando a estrutura de dados Map, além de um sistema automático de definição de matricula e a função de salvar os dados na LocalStorage.", ["img/Captura de tela 2024-05-07 143908.png", "img/Captura de tela 2024-05-07 143940.png"], ["https://github.com/diegolts7/RegisterClients-Web"]);
-
-let projeto5 = new Projeto("5. Filmes&Séries", "Esse projeto se baseia na criação de uma página web responsiva com a principal função de uma lista de filmes e séries que o usuario tem interesse de ver. As funcionalidas são as de pesquisa, onde para ter acesso ao acervo eu implementei a comunicação com a API do The Movie Database, além disso o usuario pode adicionar, marcar como assistido e ver informações sobre o título escolhido. O salvamento dos dados ocorre na LocalStorage.", ["img/Captura de tela 2024-05-07 150705.png", "img/Captura de tela 2024-05-07 150827.png", "img/Captura de tela 2024-05-07 150757.png"], ["https://github.com/diegolts7/Filmes-Series", "https://diegolts7.github.io/Filmes-Series/"]);
-
-relacaoProjetos.addProjeto(projeto2);
-relacaoProjetos.addProjeto(projeto3);
-relacaoProjetos.addProjeto(projeto4);
-relacaoProjetos.addProjeto(projeto5);
+lerProjetos();
 
 // variaveis de base para uso nas funcionalidades
 
@@ -113,6 +102,19 @@ btnFecharProjetos.addEventListener("click", () => {
 
 
 // Funçoes
+
+// Ler projetos do projetos.json
+
+async function lerProjetos(){
+
+    let dados = await fetch("projetos.json");
+    let projetos = await dados.json();
+    console.log(projetos);
+
+    projetos.forEach(projeto => {
+        relacaoProjetos.addProjeto(new Projeto(projeto.titulo, projeto.descricao, projeto.imagens, projeto.links));
+    });
+}
 
 // esconder ou mostrar os botoes de projetos
 
